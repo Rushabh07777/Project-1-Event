@@ -1,0 +1,125 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Alphabet Sounds</title> 
+    <style> 
+        body { 
+            background-color: rgb(0, 0, 0); 
+            background-image: url('./94506.jpg');
+        } 
+        #a { 
+            width: 150px; 
+            height: 150px; 
+            font-size: 25px; 
+            font-weight: 700; 
+            margin-top: 15px; 
+            margin-left: 10px; 
+            transition: all 0.2s ease-in-out; 
+        } 
+        .main { 
+            text-align: center; 
+        } 
+        #a:hover { 
+            transform: scale(1.1); 
+            transition: all 0.5s ease-in-out; 
+            background-color: black; 
+            color: white; 
+            box-shadow: 1px 1px 50px 5px rgb(221, 170, 170); 
+        } 
+        h1 { 
+            color: #FFFFFF;
+            text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+        } 
+        .half button{
+            background-color: black;
+            color: white;
+        }
+    </style> 
+</head> 
+
+<body> 
+    <div class="main"> 
+        <h1>Alphabet Sounds</h1> 
+        <div class="half"> 
+            <button onclick="playAudio('audioA')" id="a">A</button> 
+            <button onclick="playAudio('audioB')" id="a">B</button> 
+            <button onclick="playAudio('audioC')" id="a">C</button> 
+            <button onclick="playAudio('audioD')" id="a">D</button> 
+            <button onclick="playAudio('audioE')" id="a">E</button> 
+            <button onclick="playAudio('audioF')" id="a">F</button> 
+        </div> 
+        <div class="half"> 
+            <button onclick="playAudio('audioG')" id="a">G</button> 
+            <button onclick="playAudio('audioH')" id="a">H</button> 
+            <button onclick="playAudio('audioI')" id="a">I</button> 
+            <button onclick="playAudio('audioJ')" id="a">J</button> 
+            <button onclick="playAudio('audioK')" id="a">K</button> 
+            <button onclick="playAudio('audioL')" id="a">L</button> 
+        </div> 
+        <div class="half"> 
+            <button onclick="playAudio('audioM')" id="a">M</button> 
+            <button onclick="playAudio('audioN')" id="a">N</button> 
+            <button onclick="playAudio('audioO')" id="a">O</button> 
+            <button onclick="playAudio('audioP')" id="a">P</button> 
+            <button onclick="playAudio('audioQ')" id="a">Q</button> 
+            <button onclick="playAudio('audioR')" id="a">R</button> 
+        </div> 
+        <div class="half"> 
+            <button onclick="playAudio('audioS')" id="a">S</button> 
+            <button onclick="playAudio('audioT')" id="a">T</button> 
+            <button onclick="playAudio('audioU')" id="a">U</button> 
+            <button onclick="playAudio('audioV')" id="a">V</button> 
+            <button onclick="playAudio('audioW')" id="a">W</button> 
+            <button onclick="playAudio('audioX')" id="a">X</button> 
+        </div> 
+        <div class="half"> 
+            <button onclick="playAudio('audioY')" id="a">Y</button> 
+            <button onclick="playAudio('audioZ')" id="a">Z</button> 
+        </div> 
+    </div> 
+
+    <audio src="./audio/a.mp3" id="audioA"></audio> 
+    <audio src="./audio/b.mp3" id="audioB"></audio> 
+    <audio src="./audio/c.mp3" id="audioC"></audio> 
+    <audio src="./audio/d.mp3" id="audioD"></audio> 
+    <audio src="./audio/e.mp3" id="audioE"></audio> 
+    <audio src="./audio/f.mp3" id="audioF"></audio> 
+    <audio src="./audio/g.mp3" id="audioG"></audio> 
+    <audio src="./audio/h.mp3" id="audioH"></audio> 
+    <audio src="./audio/i.mp3" id="audioI"></audio> 
+    <audio src="./audio/j.mp3" id="audioJ"></audio> 
+    <audio src="./audio/k.mp3" id="audioK"></audio> 
+    <audio src="./audio/l.mp3" id="audioL"></audio> 
+    <audio src="./audio/m.mp3" id="audioM"></audio> 
+    <audio src="./audio/n.mp3" id="audioN"></audio> 
+    <audio src="./audio/o.mp3" id="audioO"></audio> 
+    <audio src="./audio/p.mp3" id="audioP"></audio> 
+    <audio src="./audio/q.mp3" id="audioQ"></audio> 
+    <audio src="./audio/r.mp3" id="audioR"></audio> 
+    <audio src="./audio/s.mp3" id="audioS"></audio> 
+    <audio src="./audio/t.mp3" id="audioT"></audio> 
+    <audio src="./audio/u.mp3" id="audioU"></audio> 
+    <audio src="./audio/v.mp3" id="audioV"></audio> 
+    <audio src="./audio/w.mp3" id="audioW"></audio> 
+    <audio src="./audio/x.mp3" id="audioX"></audio> 
+    <audio src="./audio/y.mp3" id="audioY"></audio> 
+    <audio src="./audio/z.mp3" id="audioZ"></audio> 
+
+
+    <script> 
+        function playAudio(audioId) { 
+            document.getElementById(audioId).play(); 
+        }
+
+        document.addEventListener('keypress', function(event) { 
+            let key = event.key.toUpperCase(); 
+            let audioElement = document.getElementById('audio' + key); 
+            if (audioElement) { 
+                audioElement.play(); 
+            } 
+        }); 
+    </script> 
+</body> 
+</html>
